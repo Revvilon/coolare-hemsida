@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+::-webkit-scrollbar {
+  background: var(--main);
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cool);
+}
+
+:root {
+  --main: #070c27;
+  --cool: #8e6cc3;
+}
+
+body {
+  overflow-x: hidden;
+
+  font-family: "Lato", sans-serif;
+
+  margin: 0;
+
+  height: 100vh;
+
+  background: var(--main);
+  background-image: url(/images/pexels-johannes-plenio-3262249.jpg);
+  background-size: cover;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-position-x: 5vw;
+
+  color: white;
+}
+
+header {
+  position: fixed;
+
+  right: 0;
+  top: 0;
+
+  padding: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  width: fit-content;
+
+  z-index: 1000;
+}
+
+header a {
+  font-size: 1.5em;
+  text-decoration: none;
+  font-weight: 300;
+
+  color: white;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+
+  height: 100vh;
+  width: 40vw;
+
+  background: var(--main);
+}
+
+main section:nth-of-type(1) {
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+main .first {
+  position: relative;
+}
+
+main .first .cont {
+  position: fixed;
+}
+
+main section a {
+  padding: 20px;
+}
+
+.current div {
+  background: var(--cool);
+}
+
+main section a div {
+  height: 15px !important;
+  width: 15px !important;
+
+  border-radius: 50%;
+
+  background: gray;
+
+  transition: background 0.2s ease;
+}
+
+.second {
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 1fr;
+}
+
+.second h1 {
+  margin-top: 50px;
+}
+
+.second section h2 {
+  align-self: flex-start;
+  font-size: 3em;
+  position: absolute;
+  font-weight: bold;
+}
+
+.second section p {
+  margin-top: 180px;
+  opacity: 0.5;
+  padding-right: 20px;
+}
+
+.second a {
+  text-decoration: none;
+  color: var(--cool);
+  font-weight: bold;
+  font-size: 2em;
+  margin-left: -25px;
+}
+
+.second-cont {
+  background: var(--main);
+  background-image: url(/images/Namnlöst-1.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.contain {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 1fr;
+
+
+  gap: 10%;
+  width: 60vw;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 10%;
+
+  background: #ffffff0d;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.096),
+    -3px -3px 5px 0px rgba(255, 255, 255, 0.069);
+
+  transition: transform 0.2s ease;
+}
+
+.container p {
+  opacity: 0.6;
+}
+
+.container button {
+  text-decoration: none;
+  border: 2px solid var(--cool);
+  background: transparent;
+  color: var(--cool);
+  border-radius: 200px;
+
+  padding: 10px 15px 10px 15px;
+
+  
+  cursor: pointer;
+
+  transition: all 0.15s ease;
+}
+
+button:hover {
+  background: var(--cool);
+  color: white;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.buttoncont {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.blur {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 200px;
+  background: linear-gradient(transparent, #070c27);
+}
+
+
+.blur2 {
+  position: absolute;
+  width: 100vw;
+  height: 200px;
+  transform: translateY(-100%);
+  pointer-events: none;
+  background: linear-gradient(transparent, #070c27);
+}
+
+.blur:nth-of-type(2) {
+  transform: rotate(180deg) translateY(-100%);
+}
+
+.socials {
+  width: 100vw;
+  height: 250px;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.socials .but {
+  color: white;
+  background: #070c27;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 2em;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.445),
+  -1px -1px 4px rgba(83, 83, 83, 0.151);
+  position: relative;
+  transition: all .2s ease;
+}
+
+.socials .but:hover {
+  transform: translateY(-2px);
+  filter: brightness(120%);
+}
+
+.socials .but:hover::before {
+  transform: translateY(-10%) rotate(30deg) scale(.9)
+
+}
+
+.image-cont {
+  position: fixed;
+  z-index: 100;
+  height: 100vh;
+  width: 100vw;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+  background: rgba(0, 0, 0, 0.418);
+
+  display: none;
+  align-items: center;
+  justify-items: center;
+
+  backdrop-filter: blur(40px);
+
+  transition: all .5s ease;
+}
+
+.image-cont img {
+  height: 60%;
+  width: 60%;
+}
+
+@media (max-width:1400px) { 
+  .second p {
+    transform: translateY(20px);
+  }
+}
+@media (max-width:1000px) { 
+
+  .second h1 {
+    margin-top: 150px;
+  }
+
+  .contain {
+    margin-top: -500px;
+  }
+
+  main {
+    grid-template-columns: .2fr 1fr;
+    width: 100vw!important;
+  }
+}
