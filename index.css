@@ -84,6 +84,7 @@ main .first {
 }
 
 main .first .cont {
+  z-index: 1000;
   position: fixed;
 }
 
