@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+:root {
+    --gradient1: #f2f8ff;
+    --gradient2: white;
+    --gradient3: #1d77fd;
+    --text: rgba(0, 0, 0, 0.747);
+    --shadows: rgb(255, 255, 255);
+}
+
+* {
+    transition: background 1s ease, box-shadow 1s ease;
+}
+
+.shift {
+    cursor: pointer;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+i {
+    color: var(--text);
+}
+
+.far.active {
+    display: none;
+}
+
+body{
+    color: var(--text);
+    font-family: 'Lato', sans-serif;
+
+    height: 100vh;
+    margin: 0;
+
+    background: linear-gradient(-45deg,var(--gradient1), var(--gradient2));
+    
+    display: grid; 
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container {
+    width: 500px;
+    height: 750px;
+    background: linear-gradient(-45deg, var(--gradient1), var(--gradient2));
+    border-radius: 50px;
+    box-shadow: 
+    6px 6px 16px rgba(0, 0, 0, 0.103),
+    -6px -6px 16px var(--shadows);
+    display: grid;
+    grid-template-rows: 1.5fr 3fr .5fr .4fr 2.5fr;
+}
+
+button {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    box-shadow: 
+    6px 6px 10px rgba(0, 0, 0, 0.082),
+    -6px -6px 10px var(--shadows);
+    
+    background: linear-gradient(-45deg, var(--gradient1), var(--gradient2));
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-end;
+    justify-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 100;
+}
+
+header p {
+    opacity: .6;
+}
+
+header button {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5em;
+}
+
+header button i {
+    opacity: .4;
+}
+
+.image {
+    display: grid;
+    justify-items: center;
+}
+
+.background {
+    border-radius: 50%;
+    border: 5px solid var(--gradient1);
+    background: red;
+    background-image: url(/website/img/pexels-evie-shaffer-2512281.jpg);
+    background-size: cover;
+    background-position: center;
+	position: relative;
+    height: 100%;
+    
+    box-shadow: 
+    6px 6px 10px rgba(0, 0, 0, 0.11),
+    -6px -6px 10px var(--shadows);
+}
+
+.song {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-transform: capitalize;
+    z-index: 100;
+}
+
+.song p {
+    margin: 0;
+}
+.song h1 {
+    margin-bottom: 0;
+}
+
+.progress {
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'a b'
+    'c c';
+}
+
+.progress .max {
+    justify-self: end;
+}
+
+.progress .time {
+    transform: translateY(10px);
+    font-size: .7em;
+    font-weight: bold;
+}
+
+.progress progress {
+    grid-area: c;
+    width: 100%;
+}
+
+progress::-webkit-progress-value {
+     background-color: red; 
+}
+
+.buttons {
+    display: grid;
+    justify-items: center;
+    padding-top: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.buttons button {
+    width: 110px;
+    height: 110px;
+    font-size: 1.3em;
+    border: 3px solid var(--gradient1);
+}
+
+.buttons button:nth-of-type(even) {
+    border-color: var(--gradient3);
+    background: linear-gradient(-45deg, var(--gradient3), rgb(202, 207, 255));
+}
+
+.buttons button:nth-of-type(even) i {
+    color: white;
+}
+
+.buttons button:nth-of-type(odd) i {
+    opacity: .4;
+}

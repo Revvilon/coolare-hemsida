@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/994c0103ec.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/website/index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="shift">
+        <i class="far active fa-moon"></i>
+        <i class="far fa-sun"></i>
+    </div>
+    <div class="card-container">
+        <header>
+            <button><i class="fas fa-arrow-left"></i></button>
+            <p>playing now</p>
+            <button><i class="fas fa-bars"></i></button>
+        </header>
+        <section class="image">
+            <div class="background"></div>
+        </section>
+        <section class="song">
+            <h1>song</h1>
+            <p>artist goes here</p>
+        </section>
+        <section class="progress">
+            <p class="time current">0:00</p>
+            <p class="time max">0:00</p>
+            <progress value=".5"></progress>
+        </section>
+        <section class="buttons">
+            <button><i class="fas fa-fast-backward"></i></button>
+            <button><i class="fas fa-pause"></i></button>
+            <button><i class="fas fa-fast-forward"></i></button>
+        </section>
+    </div>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="/website/index.js"></script>
+</body>
+</html>
